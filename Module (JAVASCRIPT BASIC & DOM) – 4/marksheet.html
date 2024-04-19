@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inp1 {
+            margin-left: 250px;
+        }
+
+        .inp2 {
+            margin-left: 228px;
+        }
+
+        .inp3 {
+            margin-left: 256px;
+        }
+
+        .inp4 {
+            margin-left: 274px;
+        }
+
+        .inp5 {
+            margin-left: 286px;
+        }
+
+        .inp6 {
+            margin-left: 290px;
+        }
+
+        .inp7 {
+            margin-left: 252px;
+        }
+
+        button {
+            margin-left: 335px;
+        }
+        .total1{
+            position: absolute;
+            top: 303px;
+        }
+        .total{
+            position: absolute;
+            margin-left: 90px;
+            top: 303px;
+        }
+        .box{
+            position: absolute;
+            margin-left: 250px;
+            top: 303px;  
+        }
+        .per{
+            position: absolute;
+            margin-left: 400px;
+            top: 303px;
+        }
+        
+
+    
+        
+    </style>
+</head>
+
+<body>
+    <tr>
+        <td>
+            <label for="">1.c language</label>
+            <input class="inp1" type="text" name="" id="one"><br><br>
+            <label for="">2. c++ language</label>
+            <input class="inp2" type="text" name="" id="two"><br><br>
+            <label for="">3. Database</label>
+            <input class="inp3" type="text" name="" id="three"><br><br>
+            <label for="">4.HTML</label>
+            <input class="inp4" type="text" name="" id="four"><br><br>
+            <label for="">5. CSS</label>
+            <input class="inp5" type="text" name="" id="five"><br><br>
+            <label for="">6. php</label>
+            <input class="inp6" type="text" name="" id="six"><br><br>
+            <label for="">7. Core java</label>
+            <input class="inp7" type="text" name="" id="seven"><br><br>
+        </td>       
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="add()">Result</button><br><br>
+        </td>      
+    </tr>
+   
+
+    <tr>
+        <td><h3 class="total1"><label> Total : </label></h3> </td>
+                <h3 class="total"><span id="total"></span>/350</h3>
+       </tr>
+
+       <tr>
+        <td > <h3 class="box"><label> Percentage : </label></h3></td>        
+              <h3 class="per"><span id="per"></span>/%</h3>
+        
+       </tr>
+
+    
+   
+    
+    <script>
+
+        let a = document.getElementById("one");
+        let b = document.getElementById("two");
+        let c = document.getElementById("three");
+        let d = document.getElementById("four");
+        let e = document.getElementById("five");
+        let f = document.getElementById("six");
+        let g = document.getElementById("seven");        
+        let total = document.getElementById("total");
+        
+
+        function add() {     
+
+            let add = Number(a.value) + Number(b.value)+ Number(c.value)+ Number(d.value)+ Number(e.value)+ Number(f.value)+ Number(g.value);
+            document.getElementById("total").value = add;
+
+          
+                let marktotal = document.getElementById("total").innerHTML = add;
+
+                let per = document.getElementById("per").value;
+                per = Number(marktotal / 350) * 100;
+                document.getElementById("per").innerHTML = per;
+
+                 }
+        
+
+                 let per = document.getElementById("per").value;
+
+                 per = Number(finaltotal / 350) * 100;
+                 document.getElementById("per").innerHTML = per;
+       
+    </script>
+</body>
+</html>
+
+
+
+
